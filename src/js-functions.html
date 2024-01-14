@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Variables in JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      
+    div {
+      padding: 10px;
+    }
+    </style>
+  </head>
+  <body>
+      <h1>Guide to JavaScript Functions for Beginners<h1>
+
+      <h2>Welcome to this comprehensive guide on JavaScript functions! 
+        In this guide, we'll dive deep into the world of functions in JavaScript. 
+        Whether you're just starting out with programming or looking to enhance 
+        your understanding, we'll cover everything you need to know about functions, 
+        from the basics to more advanced concepts.
+      </h2>
+
+      <ul>
+      <h2>Table of Contents:</h2>
+      
+      <div class="func-table-container" style="list-style: none">
+      <li style="list-style: none"> 1. Introduction to Functions</li>
+        <li>What are Functions?</li>
+        <li>Why Use Functions?</li>
+        <li>Anatomy of a Function</li>
+         
+      
+         <li style="list-style: none">2. Function Declaration and Calling</li>
+        <li>Declaring a Function</li>
+        <li>Parameters and Arguments</li>
+        <li>Calling a Function</li>
+      
+         <li style="list-style: none"> 3. Return Values</li>
+        <li>The `return` Statement</li>
+        <li>Using Returned Values</li>
+      
+         <li style="list-style: none"> 4. Scope and Closures</li>
+        <li>Global Scope vs. Local Scope</li>
+        <li>Closure Concept</li>
+        
+         <li style="list-style: none">5. Anonymous Functions and Arrow Functions</li>
+        <li>Anonymous Functions</li>
+        <li>Arrow Functions</li>
+      
+         <li style="list-style: none">6. Function Expressions and Declarations</li>
+        <li>Function Expressions</li>
+        <li>Function Declarations</li>
+      
+      
+         <li style="list-style: none">7. Higher-Order Functions</li>
+        <li>Functions as Parameters</li>
+        <li>Functions as Return Values</li>
+        
+      
+         <li style="list-style: none">8. Callback Functions</li>
+        <li>Introduction to Callbacks</li>
+        <li>Using Callbacks</li>
+      
+         <li style="list-style: none"> 9. Recursion</li>
+        <li>Recursive Functions</li>
+        <li>Base Case and Recursive Case</li>
+        
+      
+         <li style="list-style: none">10. Best Practices</li>
+        <li>Naming Conventions</li>
+        <li>Avoiding Side Effects</li>
+        <li>Keeping Functions Small</li>
+    
+      
+          <li style="list-style: none"> 11. Advanced Concepts</li>
+        <li>Immediately Invoked Function Expressions (IIFE</li>
+        <li>Function Currying</li>
+        <li>Function Composition</li>
+      
+      <ul>
+        </div>
+      <h2>Introduction to Functions:</h2>
+      
+      <div>**Explanation (On Chalkboard):**
+      
+      At its core, a JavaScript function is a reusable block of code that performs a 
+      specific task. Think of it like a recipe: you define the steps to achieve a certain 
+      outcome, and you can use that recipe (function) whenever you need it. Functions 
+      help you break down complex tasks into smaller, manageable parts.</div>
+      
+      <div>
+        **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Function that greets a person
+      function greet(name) {
+          console.log("Hello, " + name + "!");
+      }
+      
+      // Calling the greet function
+      greet("Alice"); // Output: Hello, Alice!
+      ```
+      </div>
+
+      <h2>2. Function Declaration and Calling:</h2>
+      
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      To declare a function, you use the `function` keyword followed by the function 
+      name and a pair of parentheses. Inside the parentheses, you can list parameters 
+      that the function accepts. Parameters act as placeholders for values you'll provide 
+      when you call the function.
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Function declaration with parameters
+      function add(a, b) {
+          return a + b;
+      }
+      
+      // Calling the add function
+      let sum = add(5, 3);
+      console.log(sum); // Output: 8
+      ```
+      
+      **3. Return Values:**
+      </div>
+
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      Functions can also provide output using the `return` statement. 
+      When the function encounters a `return` statement, it stops executing 
+      and returns the specified value.
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Function that calculates the square
+      function square(num) {
+          return num * num;
+      }
+      
+      // Calling the square function
+      let squaredValue = square(4);
+      console.log(squaredValue); // Output: 16
+      ```
+      </div>
+
+      <h2>4. Scope and Closures:</h2>
+
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      Every function in JavaScript has its own scope, which defines the 
+      accessibility of variables. Variables declared inside a function are 
+      local to that function and cannot be accessed outside of it. However, 
+      variables declared outside functions are in the global scope and can be 
+      accessed anywhere.
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      let globalVar = "I'm global";
+      
+      function exampleScope() {
+          let localVar = "I'm local";
+          console.log(globalVar); // Accessible
+      }
+      
+      exampleScope();
+      console.log(localVar); // Error: localVar is not defined
+      ```
+      </div>
+      
+      <h2>5. Anonymous Functions and Arrow Functions:</h2>
+      
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      Anonymous functions, also known as lambda functions, are functions without a name. 
+      Arrow functions are a concise way to write anonymous functions. They have a shorter
+       syntax and automatically capture the surrounding context.
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Anonymous function
+      let greet = function(name) {
+          console.log("Hello, " + name + "!");
+      };
+      
+      // Arrow function
+      let multiply = (a, b) => a * b;
+      ```
+      </div>
+
+      <h2>6. Function Expressions and Declarations:</h2>
+      
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      Function expressions involve defining a function and assigning it to a variable. 
+      Function declarations, on the other hand, declare a function with a name. Both 
+      approaches have their use cases.
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Function expression
+      let divide = function(a, b) {
+          return a / b;
+      };
+      
+      // Function declaration
+      function subtract(x, y) {
+          return x - y;
+      }
+      ```
+      </div>
+
+      <h2>7. Higher-Order Functions:</h2>
+
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      Higher-order functions are functions that either accept other functions as arguments
+       or return functions. They provide a powerful way to manipulate and work with functions
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Higher-order function that takes a function and a value
+      function applyOperation(operation, value) {
+          return operation(value);
+      }
+      
+      let result = applyOperation(square, 5); // Result will be 25
+      ```
+      </div>
+      
+      <h2>8. Callback Functions:</h2>
+      
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      Callback functions are functions passed as arguments to another function. They are commonly used for asynchronous operations and event handling.
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Callback function example
+      function processArray(arr, callback) {
+          let result = [];
+          for (let item of arr) {
+              result.push(callback(item));
+          }
+          return result;
+      }
+      
+      let numbers = [1, 2, 3];
+      let squaredNumbers = processArray(numbers, square); // [1, 4, 9]
+      ```
+      </div>
+
+      <h2>9. Recursion:</h2>
+      
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      Recursion is a technique where a function calls itself to solve a problem. It's often used for tasks that can be broken down into smaller subtasks.
+      </div>
+
+      <div>
+      **Code Example (In Code Editor):**
+      
+      ```javascript
+      // Recursive function to calculate factorial
+      function factorial(n) {
+          if (n === 1) {
+              return 1;
+          }
+          return n * factorial(n - 1);
+      }
+      
+      let factOf5 = factorial(5); // Result will be 120
+      ```
+      </div>
+
+      <h2> Best Practices:</h2>
+      
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      - Choose descriptive function names.
+      - Keep functions focused on a single task.
+      - Minimize side effects (modifying external variables).
+      - Use comments to explain complex logic.
+      </div>
+
+      <h2> Advanced Concepts:</h2>
+      
+      <div>
+      **Explanation (On Chalkboard):**
+      
+      - IIFE (Immediately Invoked Function Expressions) are functions that are executed right after they're defined.
+      - Function currying involves transforming a function with multiple arguments into a series of functions that each take a single argument.
+      - Function composition combines multiple functions to produce a new function.
+      </div>
+      <div>
+      **Conclusion:**
+      
+      You've completed this comprehensive guide to JavaScript functions. You've learned about 
+      the different aspects of functions, from their basic structure to advanced concepts. Functions are the building 
+       blocks of JavaScript programming, and mastering them will empower you to write efficient and maintainable code. 
+       Keep practicing, experimenting, and applying what you've learned to real-world projects.
+      </div>
+  </body>
+</html>

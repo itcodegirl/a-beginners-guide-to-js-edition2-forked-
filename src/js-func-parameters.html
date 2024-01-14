@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Variables in JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      div {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Function Parameters for Beginners</h1>
+
+    <h2>
+      Welcome to this comprehensive guide on JavaScript function parameters! In
+      this guide, we'll explore the world of function parameters in JavaScript.
+      Whether you're new to programming or looking to solidify your
+      understanding, we'll cover everything you need to know about working with
+      function parameters.
+    </h2>
+
+    <ul>
+      <h2>Table of Contents:</h2>
+
+      <li style="list-style: none;">1. Introduction to Function Parameters</li>
+        <li>What are Function Parameters?</li>
+        <li>Why Use Function Parameters?</li>
+        <li>The Importance of Flexibility</li>
+
+      <li style="list-style: none;">2. Defining and Using Parameters</li>
+        <li>Declaring Parameters in Functions</li>
+        <li>Passing Values as Arguments</li>
+        <li>Multiple Parameters and Order</li>
+
+      <li style="list-style: none;">3. Default Parameters</li>
+        <li>Setting Default Values</li>
+        <li>Using Default Parameters</li>
+
+      <li style="list-style: none;">4. Rest Parameters</li>
+        <li>Gathering Remaining Arguments</li>
+        <li>The arguments Object (Bonus)</li>
+
+      <li style="list-style: none;">
+        5. Named Parameters (Object Destructuring)
+      </li>
+        <li>Passing Parameters as an Object</li>
+        <li>Destructuring Named Parameters</li>
+
+      <li style="list-style: none;">6. Passing Functions as Parameters</li>
+        <li>Leveraging Functions as Arguments</li>
+        <li>Callbacks and Higher-Order Functions</li>
+
+      <li style="list-style: none;">7. Understanding Scope and Parameters</li>
+        <li>Parameter Scope vs. Variable Scope</li>
+        <li>Avoiding Naming Conflicts</li>
+
+        <h2>1. Introduction to Function Parameters:</h2>
+
+        <div>Explanation (On Chalkboard):
+
+            Function parameters are placeholders that allow you to 
+            pass values into a function when you call it. Think of 
+            them as variables that are defined when you declare the 
+            function and are later filled in with specific values when 
+            you use the function.
+        </div>
+        <div>Code Example (In Code Editor):
+            // Function with parameters
+            function greet(name) {
+                console.log("Hello, " + name + "!");
+            }
+            
+            // Calling the function with an argument
+            greet("Alice"); // Output: Hello, Alice!
+            
+        </div>
+        <h2>2. Defining and Using Parameters:</h2>
+        <div>
+            Explanation (On Chalkboard):
+            Parameters are declared inside the parentheses of the function declaration. 
+            When you call the function, you provide actual values, called arguments, which 
+            are assigned to the parameters.
+
+        </div>
+        <div>
+            Code Example (In Code Editor):
+            // Function with multiple parameters
+              function add(a, b) {
+                  return a + b;
+              }
+
+              // Calling the function with arguments
+              let sum = add(5, 3); // sum will be 8
+        </div>
+        <h2>3. Default Parameters:</h2>
+        <div>
+            Explanation (On Chalkboard):
+
+            Default parameters allow you to provide default values for parameters. 
+            If an argument is not provided when the function is called, the default value is used.
+        </div>
+        <div>
+            Code Example (In Code Editor):
+                // Function with default parameter
+                function power(base, exponent = 2) {
+                    return Math.pow(base, exponent);
+                }
+                
+                let result1 = power(3);      // Uses exponent 2 by default
+                let result2 = power(3, 4);   // Uses exponent 4
+            
+        </div>
+        <h2>4. Rest Parameters:</h2>
+        <div>
+            Explanation (On Chalkboard):
+
+            Rest parameters gather remaining arguments into an array. 
+            This is useful when you want to pass a variable number of arguments to a function.
+        </div>
+        <div>
+            Code Example (In Code Editor):
+              // Function with rest parameter
+              function sumAll(...numbers) {
+                  return numbers.reduce((total, num) => total + num, 0);
+              }
+
+              let totalSum = sumAll(1, 2, 3, 4, 5); // Result: 15
+        </div>
+        <h2>5. Named Parameters (Object Destructuring):</h2>
+        <div>
+            Explanation (On Chalkboard):
+
+            You can pass parameters as an object and destructure them within the function. 
+            This provides clarity when calling functions with multiple arguments.
+        </div>
+        <div>
+            Code Example (In Code Editor):
+            // Function with named parameters using object destructuring
+            function displayPersonInfo({ name, age }) {
+                console.log(`Name: ${name}, Age: ${age}`);
+            }
+            
+            let person = { name: "John", age: 30 };
+            displayPersonInfo(person); // Output: Name: John, Age: 30            
+        </div>
+        <h2>6. Passing Functions as Parameters:</h2>
+        <div>
+            Explanation (On Chalkboard):
+
+            Functions can also be passed as parameters. This is commonly used 
+            for callbacks in higher-order functions, allowing for dynamic behavior.
+        </div>
+        <div>
+            Code Example (In Code Editor):
+                // Function that uses a callback function
+                function processArray(arr, callback) {
+                    let result = [];
+                    for (let item of arr) {
+                        result.push(callback(item));
+                    }
+                    return result;
+                }
+                
+                let numbers = [1, 2, 3];
+                let squaredNumbers = processArray(numbers, num => num * num); // [1, 4, 9]
+            
+        </div>
+        <h2>7. Understanding Scope and Parameters:</h2>
+        <div>Explanation (On Chalkboard):
+
+            Parameters have their own scope within the function, separate from the rest of the code. 
+            This helps prevent naming conflicts with variables outside the function.
+        </div>
+        <div>
+            Code Example (In Code Editor):
+                let globalVar = "I'm global";
+
+                function exampleScope(localVar) {
+                    console.log(globalVar); // Accessible
+                    console.log(localVar);  // Accessible
+                }
+                
+                exampleScope("I'm local");
+                console.log(globalVar);    // Accessible
+                console.log(localVar);     // Error: localVar is not defined
+            
+        </div>
+        
+      <!-- <li style="list-style: none;"></li>
+      <li></li>
+      <li></li> -->
+    </div>
+    </ul>
+  </body>
+</html>
