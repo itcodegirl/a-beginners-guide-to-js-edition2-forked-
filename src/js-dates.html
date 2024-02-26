@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dates in JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div>
+      <h1>Dates in JavaScript</h1>
+      <p>
+        Dates are an essential part of web development, and JavaScript provides
+        a built-in Date object to work with dates and times. This guide will
+        cover the basics of working with dates in JavaScript, including creating
+        and formatting dates, as well as performing common operations such as
+        calculating the difference between dates and working with time zones.
+      </p>
+      
+      <p>
+        JavaScript dates are a way to work with dates and times in your code. A
+        date in JavaScript is an object that represents a moment in time. These
+        date objects can show you the year, month, day, hour, minute, second,
+        and even milliseconds.
+      </p>
+      </div>
+
+      <div>
+      <h2>Dates in JavaScript Are Essential for Coding</h2>
+      <p>
+        Dates in JavaScript are used for handling and manipulating dates and
+        times in your code. They are essential for many different purposes.
+        Here's what they are commonly used for:
+      </p>
+      </div>
+
+    <div>
+      <ul>
+        <h3>1. Displaying Dates and Times:</h3>
+        <li>
+          You can show the current date and time to users, or display dates and
+          times stored in databases. This is common in web applications and
+          forms.  
+        </li>
+
+        <h3>2. Calculating Time Intervals:</h3>
+        <li>
+          You might want to find the difference between two dates, like the
+          number of days until a deadline or the time since an event occurred. 
+
+        </li>
+
+        <h3>3. Logging and Timestamps:</h3>
+        <li>
+          Dates are important for creating timestamps in logs to track when
+          events happen in your application. This is useful for debugging and
+          monitoring. 
+        </li>
+
+        <h3>4. Handling User Input:</h3>
+        <li>
+          When users input dates (like birthdates, appointments, etc.),
+          JavaScript dates help parse, validate, and use these dates. 
+        </li>
+
+        <h3>5. Time Zone Adjustments:</h3>
+        <li>
+          JavaScript Date objects can be used to handle and display dates and
+          times in different time zones. This is important for international
+          applications.
+        </li>
+
+        <h3>6. Date Arithmetic:</h3>
+        <li>
+          You might need to add or subtract time from a date, like calculating a
+          due date or expiry date. JavaScript dates can help with these kinds of
+          calculations. 
+        </li>
+      </ul>
+    </div>
+
+    <div>
+        <h2>Understanding JavaScript Date Objects</h2>
+        <p>
+          The JavaScript Date object is used to work with dates and times. It
+          provides methods for creating, formatting, and manipulating dates. The
+          Date object is a data type built into the JavaScript language. It is
+          used to create instances of dates and times, and to work with these
+          instances. 
+        </p>
+      </div>
+
+      <div>
+        <p>
+          The Date object is a static object, meaning that it can be accessed
+          directly without creating an instance of the Date object. The Date
+          object is used to work with dates and times in JavaScript. It provides
+          methods for creating, formatting, and manipulating dates. The Date
+          object is a data type built into the JavaScript language. It is used
+          to create instances of dates and times, and to work with these
+          instances.  The Date object is a static object, meaning that it can be
+          accessed directly without creating an instance of the Date object.
+
+        </p>
+      </div>
+
+      <div>
+        <h2>Date Object Creation</h2>
+        <ul>
+          <h3>Current Date & Time:</h3>
+            <li>`new Date()`- creates a Date object with the current date and time.</li>
+          <h3>Specific Date & Time:</h3>
+            <li>`new Date(year, month, day, hours, minutes,
+            seconds, milliseconds)` - lets you specify each component. Note that
+            month is 0-indexed (0 for January, 1 for February, etc.).</li>
+          <h3>Timestamp:</h3>
+            <li>`new Date(milliseconds)` - creates a date based on the number of
+            milliseconds since January 1, 1970. </li>
+          <h3>Date String:</h3> 
+            <li>`new Date(dateString)`
+            creates a date based on a string format, like "2023-03-01".</li>
+        </ul>
+        
+
+        
+        <ul>
+        <h2>Getting Date Components:</h2>
+        <h3>Year:</h3>
+          <li>getFullYear() returns the 4-digit year.</li> 
+        <h3>Month:</h3> 
+          <li>`getMonth()` - returns the month (0-11). </li> 
+        <h3>Day of Month:</h3> 
+          <li>`getDate()` - returns the day (1-31). </li>
+        <h3>Day of Week:</h3>
+          <li>`getDay()` - returns the day of the week (0 for
+          Sunday, 1 for Monday, etc.).</li>    
+        <h3>Hours, Minutes, Seconds, Milliseconds:</h3>
+          <li>Accessed by `getHours()`, `getMinutes()`, `getSeconds()`, `getMilliseconds()`.</li>
+        </ul>
+
+        <ul>
+        <h3>Setting Date Components:</h3>
+        <l1>Similar to the 'get' methods, there are 'set' methods like
+          `setFullYear(year)`, `setMonth(month)`, `setDate(day)`, `setHours(hours)`,
+          etc.</l1>
+          <li>These methods change the corresponding part of the Date object.</l1>
+        </ul>
+
+        <ul>
+        <h3>String Representation/Formatting Dates:</h3>
+         <li>`toString()`- converts the date to a string in a readable format.</li>
+          <li>`toLocaleDateString()`- provides a localized date string.</li> 
+          <li>`toISOString()` - gives an ISO formatted string.</li>
+          <li>`toUTCString()` - returns a UTC date string.</li>
+        </ul>
+
+        <ul>
+        <h3>Date Arithmetic and Comparison:</h3>
+        <li>Dates can be added using the `set` methods, which change the
+          corresponding part of the Date object. Dates can be subtracted, returning
+          the difference in milliseconds. To compare dates, convert them to numeric
+          values (e.g., `date1.getTime() === date2.getTime()`).</li>
+        </ul>
+      </div>
+
+      <div>
+      <h2>
+        Example: Creating and Formatting Dates in JavaScript
+      </h2>
+      <image src="images/dateObject.png" alt="Date Example" />
+      <br>
+      <br>
+      <image src="images/dateComponents.png" alt="Date Example" />
+      <br>
+      <br>
+      <image src="images/formatDate.png" alt="Date Example" />
+      <br>
+      <br>
+      <image src="images/compareDates.png" alt="Date Example" />
+      <br>
+      <br>
+      </div>
+
+     
+
+      <div>
+        <h2>Calculating Date Differences</h2>
+        <p>
+          You can calculate the difference between two dates by subtracting them
+          from each other. This will give you the difference in milliseconds. You
+          can then convert this to other units (e.g., seconds, minutes, hours,
+          days) as needed.  
+        </p>
+      </div>
+
+      <div>
+        <ul>
+      
+        <h3>Time Zones:</h3>
+        <li>JavaScript Date objects can handle time zones, but it's important to
+          be aware of the limitations and complexities involved. The Intl.DateTimeFormat
+          object can be used to format dates and times in a specific time zone.</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+        <h3>Working with Dates:</h3>
+        <li>Working with dates in JavaScript can be complex, especially when
+          dealing with time zones and internationalization. It's important to be
+          aware of the limitations and complexities involved in working with dates
+          in JavaScript, and to use the appropriate tools and libraries to handle
+          dates and times in your applications.</li>
+          </ul>
+      </div>
+
+      <div>
+        <h2>Conclusion</h2>
+
+        <p> In this guide, we've covered the basics of working with dates in
+          JavaScript, including creating and formatting dates, as well as
+          performing common operations such as calculating the difference between
+          dates and working with time zones. Dates are an essential part of web
+          development, and JavaScript provides a built-in Date object to work with
+          dates and times. We hope this guide has helped you understand the
+          fundamentals of working with dates in JavaScript, and that you feel
+          confident in using dates in your own applications.</p>
+      </div>
+
+      <div>
+        <h2>Additional Resources</h2>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">MDN Web Docs: Date</a></li>
+          <li><a href="https://www.w3schools.com/js/js_dates.asp">W3Schools: JavaScript Dates</a></li>
+          <li><a href="https://momentjs.com/">Moment.js</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat">MDN Web Docs: Intl.DateTimeFormat</a></li>
+          </ul>
+      </div>           
+  </body>
+</html>

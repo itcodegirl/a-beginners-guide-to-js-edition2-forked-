@@ -1,36 +1,54 @@
 body {
-  display: block;
   background-color: #282c34;
   color: #abb2bf;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  overflow-x: auto;
-  margin: 0 10px;
+  margin: 0;
+  padding: 0;
 }
+
+
+
+/* div {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+} */
 
 div h1,
 h1 {
   font-family: "Sofia Sans Semi Condensed", sans-serif;
   font-size: 35px;
+  color: #c71585;
+}
+
+div h2,
+h2 {
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  font-size: 28px;
+  color: #8A2BE2;
 }
 
 div h3,
 h3 {
   font-family: "Sofia Sans Semi Condensed", sans-serif;
-  font-size: 28px;
+  font-size: 24px;
+  color: #DA70D6;
 }
 
 div p,
 p {
   font-family: "Sofia Sans Semi Condensed", sans-serif;
   font-size: 20px;
+  color: #1E90FF;
+  text-indent: 25px;
 }
 
 ul,
 ol {
   font-family: "Sofia Sans Semi Condensed", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  color: #4682B4;
 }
 
 ul li {
