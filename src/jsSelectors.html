@@ -53,6 +53,44 @@
       </ul>
 
       <h2>3. `document.getElementsByTagName(tagname)`</h2>
+      <ul>
+        <li>
+          Selects all elements of a specific tag type (like div, p, etc.).
+        </li>
+        <li>Returns a live HTMLCollection.</li>
+        <li>
+          Example: document.getElementsByTagName('p') selects all
+          <p>elements.</p>
+        </li>
+      </ul>
+
+      <h2>4. `document.querySelector(selector)`</h2>
+      <ul>
+        <li>
+          Selects the first element that matches a specified CSS selector.
+        </li>
+        <li>
+          Returns the first matching element or null if no matches are found.
+        </li>
+        <li>
+          Can use any CSS selector (like IDs, classes, or complex selectors).
+        </li>
+        <li>
+          Example: document.querySelector('.container') selects the first
+          element with the class "container".
+        </li>
+      </ul>
+
+      <h2>5. document.querySelectorAll(selector)</h2>
+      <ul>
+        <li>Selects all elements that match a specified CSS selector.</li>
+        <li>Returns a NodeList (similar to an array).</li>
+        <li>Can use any CSS selector.</li>
+        <li>
+          Example: document.querySelectorAll('p') selects all
+          <p>elements.</p>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
